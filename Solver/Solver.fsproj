@@ -120,6 +120,13 @@
       <Private>True</Private>
     </Reference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MathParser\MathParser.csproj">
+      <Name>MathParser</Name>
+      <Project>{6183cec4-c69b-4640-9c8e-3c40980d96d0}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
   <!-- F# targets -->
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '11.0'">
