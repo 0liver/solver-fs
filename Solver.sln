@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Solver", "Solver\Solver.fsproj", "{A0A0EBE5-5811-4B78-82AF-BC05965B3F67}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathParser", "MathParser\MathParser.csproj", "{6183CEC4-C69B-4640-9C8E-3C40980D96D0}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Tutorial", "Tutorial\Tutorial.fsproj", "{C951C109-92BC-4439-AE6C-6EE684F8D979}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{A0A0EBE5-5811-4B78-82AF-BC05965B3F67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0A0EBE5-5811-4B78-82AF-BC05965B3F67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0A0EBE5-5811-4B78-82AF-BC05965B3F67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6183CEC4-C69B-4640-9C8E-3C40980D96D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6183CEC4-C69B-4640-9C8E-3C40980D96D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6183CEC4-C69B-4640-9C8E-3C40980D96D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6183CEC4-C69B-4640-9C8E-3C40980D96D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C951C109-92BC-4439-AE6C-6EE684F8D979}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C951C109-92BC-4439-AE6C-6EE684F8D979}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C951C109-92BC-4439-AE6C-6EE684F8D979}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C951C109-92BC-4439-AE6C-6EE684F8D979}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
