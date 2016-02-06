@@ -37,8 +37,8 @@ module Client =
 
     let Solve () =
         let getDigits () =
-            let r = System.Random().Next
-            sprintf "%d  %d  %d = %d  %d  %d" (r(10)) (r(10)) (r(10)) (r(10)) (r(10)) (r(10))
+            let r () = System.Random().Next(10)
+            sprintf "%d%d%d=%d%d%d" (r()) (r()) (r()) (r()) (r()) (r())
         let input =
             Input [Attr.Class "laaarge"] -< [Value (getDigits ())]
             |>! OnKeyPress (fun elm _ ->

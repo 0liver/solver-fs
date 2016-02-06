@@ -57,27 +57,26 @@
     },
     Solve:function()
     {
-     var getDigits,x,arg10,arg101,arg001,input,x1,arg102,arg002,btReload,arg103,arg104,arg105,arg106,arg107,arg108,arg109,arg10a,arg10b,arg10c,arg10d,arg10e,arg10f,arg1010,arg1011,arg1012;
+     var getDigits,x,arg10,arg101,arg00,input,x1,arg102,arg001,btReload,arg103,arg104,arg105,arg106,arg107,arg108,arg109,arg10a,arg10b,arg10c,arg10d,arg10e,arg10f,arg1010,arg1011,arg1012;
      getDigits=function()
      {
-      var objectArg,r,_,_1,_2,_3,_4,_5;
-      objectArg=Random.New();
-      r=function(arg00)
+      var r,_,_1,_2,_3,_4,_5;
+      r=function()
       {
-       return objectArg.Next1(arg00);
+       return Random.New().Next1(10);
       };
-      _=r(10);
-      _1=r(10);
-      _2=r(10);
-      _3=r(10);
-      _4=r(10);
-      _5=r(10);
-      return Global.String(_)+"  "+Global.String(_1)+"  "+Global.String(_2)+" = "+Global.String(_3)+"  "+Global.String(_4)+"  "+Global.String(_5);
+      _=r(null);
+      _1=r(null);
+      _2=r(null);
+      _3=r(null);
+      _4=r(null);
+      _5=r(null);
+      return Global.String(_)+Global.String(_1)+Global.String(_2)+"="+Global.String(_3)+Global.String(_4)+Global.String(_5);
      };
      arg10=List.ofArray([Attr.Attr().NewAttr("class","laaarge")]);
      arg101=getDigits(null);
      x=Operators.add(Tags.Tags().NewTag("input",arg10),List.ofArray([Attr.Attr().NewAttr("value",arg101)]));
-     arg001=function(elm)
+     arg00=function(elm)
      {
       return function()
       {
@@ -93,18 +92,18 @@
        });
       };
      };
-     EventsPervasives.Events().OnKeyPress(arg001,x);
+     EventsPervasives.Events().OnKeyPress(arg00,x);
      input=x;
      arg102=List.ofArray([Attr.Attr().NewAttr("class","btn btn-primary btn-xs"),Attr.Attr().NewAttr("style","float: right;")]);
      x1=Operators.add(Tags.Tags().NewTag("button",arg102),List.ofArray([Tags.Tags().text("Start over")]));
-     arg002=function()
+     arg001=function()
      {
       return function()
       {
        return input.set_Value(getDigits(null));
       };
      };
-     EventsPervasives.Events().OnClick(arg002,x1);
+     EventsPervasives.Events().OnClick(arg001,x1);
      btReload=x1;
      arg104=List.ofArray([Tags.Tags().text(" Use: ")]);
      arg105=List.ofArray([Tags.Tags().text("+")]);
