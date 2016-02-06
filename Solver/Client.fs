@@ -38,6 +38,7 @@ module Client =
     let Solve () =
         let getDigits () =
             let r () = System.Random().Next(10)
+            // TODO: don't allow two zeros on either side of the = sign
             sprintf "%d%d%d=%d%d%d" (r()) (r()) (r()) (r()) (r()) (r())
         let input =
             Input [Attr.Class "laaarge"] -< [Value (getDigits ())]
@@ -51,6 +52,7 @@ module Client =
         let btReload =
             Button [Attr.Class "btn btn-primary btn-xs"; Attr.Style "float: right;"] -< [Text "Start over"]
             |>! OnClick (fun _ _ ->
+                input.SetStyle ""
                 input.Value <- getDigits ()
             )
         

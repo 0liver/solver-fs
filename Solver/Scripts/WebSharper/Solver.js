@@ -100,6 +100,7 @@
      {
       return function()
       {
+       input["HtmlProvider@33"].SetStyle(input.get_Body(),"");
        return input.set_Value(getDigits(null));
       };
      };
