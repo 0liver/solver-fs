@@ -1,0 +1,5 @@
+- http://www.websharper.com/docs
+
+- handling javascript events: http://stackoverflow.com/a/25956758/177710
+
+- http://getbootstrap.com/css/

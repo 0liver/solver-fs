@@ -25,7 +25,7 @@ module Server =
             let compare (sides:string[]) =
                 match sides.Length with
                 | 0|1->false
-                | _ ->
+                | _ -> // TODO: catch exceptions, return false
                     let parser = MathParser.MathParser()
                     let left = sides.[0]
                     let right = sides.[1]
