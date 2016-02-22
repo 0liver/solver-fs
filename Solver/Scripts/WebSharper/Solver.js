@@ -57,7 +57,7 @@
     },
     Solve:function()
     {
-     var getDigits,x,arg10,arg101,arg00,input,insertSign,symbolPopup,arg102,arg103,arg104,arg105,arg106,arg107,x1,arg108,arg109,arg10a,arg10b,arg10c,arg10d,arg10e,arg10f,showPopup,x2,arg1010,arg001,btReload,signs,arg1011,arg1012,arg1013,arg1014,arg1015,arg1016,arg1017,arg1018,arg1019,arg101a,arg101b,arg101c,arg101d,arg101e,arg101f,arg1020,arg002,x3,arg003;
+     var getDigits,x,arg10,arg101,arg00,input,insertSign,symbolPopup,arg102,arg103,x1,arg104,arg105,x2,arg106,arg107,x3,arg108,arg109,x4,arg10a,arg10b,x5,arg10c,arg10d,x6,arg10e,arg10f,x7,showPopup,x8,arg1010,arg001,btReload,signs,arg1011,arg1012,arg1013,arg1014,arg1015,arg1016,arg1017,arg1018,arg1019,arg101a,arg101b,arg101c,arg101d,arg101e,arg101f,arg1020,arg002,x9,arg003;
      getDigits=function()
      {
       var r,_,_1,_2,_3,_4,_5;
@@ -110,21 +110,33 @@
      };
      arg102=List.ofArray([Attr.Attr().NewAttr("style","position: absolute; display: none")]);
      arg103=List.ofArray([Tags.Tags().text("+")]);
+     x1=Tags.Tags().NewTag("kbd",arg103);
+     EventsPervasives.Events().OnClick(insertSign,x1);
      arg104=List.ofArray([Tags.Tags().text(" ")]);
      arg105=List.ofArray([Tags.Tags().text("-")]);
+     x2=Tags.Tags().NewTag("kbd",arg105);
+     EventsPervasives.Events().OnClick(insertSign,x2);
      arg106=List.ofArray([Tags.Tags().text(" ")]);
      arg107=List.ofArray([Tags.Tags().text("*")]);
-     x1=Tags.Tags().NewTag("kbd",arg107);
-     EventsPervasives.Events().OnClick(insertSign,x1);
+     x3=Tags.Tags().NewTag("kbd",arg107);
+     EventsPervasives.Events().OnClick(insertSign,x3);
      arg108=List.ofArray([Tags.Tags().text(" ")]);
      arg109=List.ofArray([Tags.Tags().text("/")]);
+     x4=Tags.Tags().NewTag("kbd",arg109);
+     EventsPervasives.Events().OnClick(insertSign,x4);
      arg10a=List.ofArray([Tags.Tags().text(" ")]);
      arg10b=List.ofArray([Tags.Tags().text("^")]);
+     x5=Tags.Tags().NewTag("kbd",arg10b);
+     EventsPervasives.Events().OnClick(insertSign,x5);
      arg10c=List.ofArray([Tags.Tags().text(" ")]);
      arg10d=List.ofArray([Tags.Tags().text("(")]);
+     x6=Tags.Tags().NewTag("kbd",arg10d);
+     EventsPervasives.Events().OnClick(insertSign,x6);
      arg10e=List.ofArray([Tags.Tags().text(" ")]);
      arg10f=List.ofArray([Tags.Tags().text(")")]);
-     symbolPopup=Operators.add(Tags.Tags().NewTag("div",arg102),List.ofArray([Tags.Tags().NewTag("kbd",arg103),Tags.Tags().NewTag("span",arg104),Tags.Tags().NewTag("kbd",arg105),Tags.Tags().NewTag("span",arg106),x1,Tags.Tags().NewTag("span",arg108),Tags.Tags().NewTag("kbd",arg109),Tags.Tags().NewTag("span",arg10a),Tags.Tags().NewTag("kbd",arg10b),Tags.Tags().NewTag("span",arg10c),Tags.Tags().NewTag("kbd",arg10d),Tags.Tags().NewTag("span",arg10e),Tags.Tags().NewTag("kbd",arg10f)]));
+     x7=Tags.Tags().NewTag("kbd",arg10f);
+     EventsPervasives.Events().OnClick(insertSign,x7);
+     symbolPopup=Operators.add(Tags.Tags().NewTag("div",arg102),List.ofArray([x1,Tags.Tags().NewTag("span",arg104),x2,Tags.Tags().NewTag("span",arg106),x3,Tags.Tags().NewTag("span",arg108),x4,Tags.Tags().NewTag("span",arg10a),x5,Tags.Tags().NewTag("span",arg10c),x6,Tags.Tags().NewTag("span",arg10e),x7]));
      showPopup=function(elm)
      {
       var cursorPos,elt,caretPos,arg20,copyOfStruct,arg201,copyOfStruct1;
@@ -145,7 +157,7 @@
       return symbolPopup["HtmlProvider@33"].SetCss(symbolPopup.get_Body(),"display","");
      };
      arg1010=List.ofArray([Attr.Attr().NewAttr("class","btn btn-primary btn-xs"),Attr.Attr().NewAttr("style","float: right;")]);
-     x2=Operators.add(Tags.Tags().NewTag("button",arg1010),List.ofArray([Tags.Tags().text("Start over")]));
+     x8=Operators.add(Tags.Tags().NewTag("button",arg1010),List.ofArray([Tags.Tags().text("Start over")]));
      arg001=function()
      {
       return function()
@@ -154,8 +166,8 @@
        return input.set_Value(getDigits(null));
       };
      };
-     EventsPervasives.Events().OnClick(arg001,x2);
-     btReload=x2;
+     EventsPervasives.Events().OnClick(arg001,x8);
+     btReload=x8;
      arg1011=List.ofArray([Tags.Tags().text("+")]);
      arg1012=List.ofArray([Tags.Tags().text(" ")]);
      arg1013=List.ofArray([Tags.Tags().text("-")]);
@@ -180,7 +192,7 @@
       };
      };
      EventsPervasives.Events().OnKeyUp(arg002,input);
-     x3=input;
+     x9=input;
      arg003=function(elm)
      {
       return function(evt)
@@ -195,8 +207,8 @@
        return showPopup(elm);
       };
      };
-     EventsPervasives.Events().OnMouseUp(arg003,x3);
-     arg101e=List.ofArray([Operators.add(Tags.Tags().NewTag("h4",arg101f),signs),Operators.add(Tags.Tags().NewTag("p",arg1020),List.ofArray([x3,symbolPopup]))]);
+     EventsPervasives.Events().OnMouseUp(arg003,x9);
+     arg101e=List.ofArray([Operators.add(Tags.Tags().NewTag("h4",arg101f),signs),Operators.add(Tags.Tags().NewTag("p",arg1020),List.ofArray([x9,symbolPopup]))]);
      return Tags.Tags().NewTag("div",arg101e);
     },
     Start:function(input,k)
