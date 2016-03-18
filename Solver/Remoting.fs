@@ -23,15 +23,3 @@ module Server =
         async {
             return solve input
         }
-
-    [<Rpc>]
-    let Solve input =
-        
-        let highlight result =
-            match result with
-            | true -> "color: green"
-            | false -> "color: red"
-
-        async {
-            return highlight (solve input)
-        }
