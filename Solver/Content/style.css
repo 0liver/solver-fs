@@ -1,0 +1,10 @@
+.digit {
+    font-size: 3em;
+}
+.symbol {
+    padding: 0 3px;
+    border: 1px dotted silver;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 3em;
+}
