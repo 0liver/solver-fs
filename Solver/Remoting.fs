@@ -6,20 +6,6 @@ open MathParser
 module Server =
 
     [<Rpc>]
-    let DoSomething input =
-        let AddDate (value: string) =
-            value + " at " + (System.DateTime.Now).ToString()
-        async {
-            return AddDate ( input + ", Du, " )
-        }
-
-    [<Rpc>]
-    let TellMeSomething input (key: int) =
-        async {
-            return sprintf "[%c] (%s)" (System.Convert.ToChar(key)) input
-        }
-
-    [<Rpc>]
     let Solve input =
         let solve (equation: string) =
             let compare (sides:string[]) =

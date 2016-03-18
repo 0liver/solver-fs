@@ -17,34 +17,6 @@ module ClientResources =
 [<JavaScript>]
 module Client =
 
-    let Start input k =
-        async {
-            let! data = Server.DoSomething input
-            return k data
-        }
-        |> Async.Start
-
-    let Main () =
-        let input = Input [Attr.Value ""] -< []
-        let output = H1 []
-        Div [
-            input
-            |>! OnKeyPress (fun _ key ->
-                async {
-                    let! data = Server.TellMeSomething input.Value key.CharacterCode
-                    output.Text <- data
-                }
-                |> Async.Start
-            )
-            Button [Text "Send"]
-            |>! OnClick (fun _ _ ->
-                Start input.Value (fun d -> output.Text <- d)
-            )
-            HR []
-            H4 [Attr.Class "text-muted"] -< [Text "The server responded:"]
-            Div [Attr.Class "jumbotron"] -< [output]
-        ]
-    
     [<InlineAttribute "$elt.selectionStart">]
     let cursorPosition elt = X<int>
 

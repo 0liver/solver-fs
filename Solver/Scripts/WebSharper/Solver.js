@@ -1,60 +1,9 @@
 (function()
 {
- var Global=this,Runtime=this.IntelliFactory.Runtime,Html,Client,Operators,List,Attr,Tags,T,Concurrency,Remoting,AjaxRemotingProvider,EventsPervasives,Solver,Client1,Random,console,String,jQuery,Strings,getCaretCoordinates;
+ var Global=this,Runtime=this.IntelliFactory.Runtime,Random,Html,Client,Operators,List,Attr,Tags,Concurrency,Remoting,AjaxRemotingProvider,EventsPervasives,console,String,jQuery,Strings,getCaretCoordinates;
  Runtime.Define(Global,{
   Solver:{
    Client:{
-    Main:function()
-    {
-     var input,arg10,x,output,arg101,arg00,arg102,x1,arg002,arg103,arg104,arg105;
-     arg10=List.ofArray([Attr.Attr().NewAttr("value","")]);
-     input=Operators.add(Tags.Tags().NewTag("input",arg10),Runtime.New(T,{
-      $:0
-     }));
-     x=Runtime.New(T,{
-      $:0
-     });
-     output=Tags.Tags().NewTag("h1",x);
-     arg00=function()
-     {
-      return function(key)
-      {
-       var arg001;
-       arg001=Concurrency.Delay(function()
-       {
-        return Concurrency.Bind(AjaxRemotingProvider.Async("Solver:1",[input.get_Value(),key.CharacterCode]),function(_arg11)
-        {
-         output.set_Text(_arg11);
-         return Concurrency.Return(null);
-        });
-       });
-       return Concurrency.Start(arg001,{
-        $:0
-       });
-      };
-     };
-     EventsPervasives.Events().OnKeyPress(arg00,input);
-     arg102=List.ofArray([Tags.Tags().text("Send")]);
-     x1=Tags.Tags().NewTag("button",arg102);
-     arg002=function()
-     {
-      return function()
-      {
-       return Client1.Start(input.get_Value(),function(d)
-       {
-        return output.set_Text(d);
-       });
-      };
-     };
-     EventsPervasives.Events().OnClick(arg002,x1);
-     arg103=Runtime.New(T,{
-      $:0
-     });
-     arg104=List.ofArray([Attr.Attr().NewAttr("class","text-muted")]);
-     arg105=List.ofArray([Attr.Attr().NewAttr("class","jumbotron")]);
-     arg101=List.ofArray([input,x1,Tags.Tags().NewTag("hr",arg103),Operators.add(Tags.Tags().NewTag("h4",arg104),List.ofArray([Tags.Tags().text("The server responded:")])),Operators.add(Tags.Tags().NewTag("div",arg105),List.ofArray([output]))]);
-     return Tags.Tags().NewTag("div",arg101);
-    },
     Solve:function()
     {
      var getDigits,x,arg10,arg101,arg00,input,insertSign,symbolPopup,arg102,arg103,x1,arg104,arg105,x2,arg106,arg107,x3,arg108,arg109,x4,arg10a,arg10b,x5,arg10c,arg10d,x6,arg10e,arg10f,x7,showPopup,x8,arg1010,arg001,btReload,signs,arg1011,arg1012,arg1013,arg1014,arg1015,arg1016,arg1017,arg1018,arg1019,arg101a,arg101b,arg101c,arg101d,arg101e,arg101f,arg1020,arg002,x9,arg003;
@@ -82,7 +31,7 @@
       {
        return Concurrency.Start(Concurrency.Delay(function()
        {
-        return Concurrency.Bind(AjaxRemotingProvider.Async("Solver:2",[elm.get_Value()]),function(_arg11)
+        return Concurrency.Bind(AjaxRemotingProvider.Async("Solver:0",[elm.get_Value()]),function(_arg11)
         {
          elm["HtmlProvider@33"].SetStyle(elm.get_Body(),_arg11);
          return Concurrency.Return(null);
@@ -210,40 +159,23 @@
      EventsPervasives.Events().OnMouseUp(arg003,x9);
      arg101e=List.ofArray([Operators.add(Tags.Tags().NewTag("h4",arg101f),signs),Operators.add(Tags.Tags().NewTag("p",arg1020),List.ofArray([x9,symbolPopup]))]);
      return Tags.Tags().NewTag("div",arg101e);
-    },
-    Start:function(input,k)
-    {
-     var arg00;
-     arg00=Concurrency.Delay(function()
-     {
-      return Concurrency.Bind(AjaxRemotingProvider.Async("Solver:0",[input]),function(_arg1)
-      {
-       return Concurrency.Return(k(_arg1));
-      });
-     });
-     return Concurrency.Start(arg00,{
-      $:0
-     });
     }
    }
   }
  });
  Runtime.OnInit(function()
  {
+  Random=Runtime.Safe(Global.WebSharper.Random);
   Html=Runtime.Safe(Global.WebSharper.Html);
   Client=Runtime.Safe(Html.Client);
   Operators=Runtime.Safe(Client.Operators);
   List=Runtime.Safe(Global.WebSharper.List);
   Attr=Runtime.Safe(Client.Attr);
   Tags=Runtime.Safe(Client.Tags);
-  T=Runtime.Safe(List.T);
   Concurrency=Runtime.Safe(Global.WebSharper.Concurrency);
   Remoting=Runtime.Safe(Global.WebSharper.Remoting);
   AjaxRemotingProvider=Runtime.Safe(Remoting.AjaxRemotingProvider);
   EventsPervasives=Runtime.Safe(Client.EventsPervasives);
-  Solver=Runtime.Safe(Global.Solver);
-  Client1=Runtime.Safe(Solver.Client);
-  Random=Runtime.Safe(Global.WebSharper.Random);
   console=Runtime.Safe(Global.console);
   String=Runtime.Safe(Global.String);
   jQuery=Runtime.Safe(Global.jQuery);
