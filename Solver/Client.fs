@@ -56,17 +56,11 @@ module Client =
         let symbolPopup =
             Div [Attr.Style "position: absolute; display: none"] -< [
                 Kbd [Text "+"] |>! OnClick insertSign
-                Span [Text " "]
                 Kbd [Text "-"] |>! OnClick insertSign
-                Span [Text " "]
                 Kbd [Text "*"] |>! OnClick insertSign
-                Span [Text " "]
                 Kbd [Text "/"] |>! OnClick insertSign
-                Span [Text " "]
                 Kbd [Text "^"] |>! OnClick insertSign
-                Span [Text " "]
                 Kbd [Text "("] |>! OnClick insertSign
-                Span [Text " "]
                 Kbd [Text ")"] |>! OnClick insertSign
             ]
         
@@ -92,17 +86,11 @@ module Client =
 
         let signs = [
                 Kbd [Text "+"]
-                Span [Text " "]
                 Kbd [Text "-"]
-                Span [Text " "]
                 Kbd [Text "*"]
-                Span [Text " "]
                 Kbd [Text "/"]
-                Span [Text " "]
                 Kbd [Text "^"]
-                Span [Text " "]
                 Kbd [Text "("]
-                Span [Text " "]
                 Kbd [Text ")"]
                 btReload
             ]
