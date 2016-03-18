@@ -1,10 +1,38 @@
+
+kbd {
+    margin-right: 5px;
+}
+
+div kbd {
+    cursor: pointer;
+}
+
 .digit {
     font-size: 3em;
 }
+
 .symbol {
     padding: 0 3px;
     border: 1px dotted silver;
     margin-bottom: 10px;
     cursor: pointer;
     font-size: 3em;
+}
+
+.symbol:hover {
+    text-decoration: none;
+}
+
+#symbol-popup {
+    position: absolute;
+    display: none;
+    background: #fff 90%;
+}
+
+.success {
+    background-color: #14B514;    
+}
+
+.failure {
+    background-color: #D2072B;
 }
